@@ -1,0 +1,275 @@
+/*
+Theme Name: Zero
+Theme URI: http://colorlabsproject.com
+Description: Blank template
+Author: ColorLabs
+Version: 1.0
+Tags:
+*/
+
+/* #Basic HTML
+================================================== */
+body {
+  color:#121212;
+  font: 14px/1.5 'Arial', 'Liberation Sans', FreeSans, sans-serif;
+}
+p { line-height:1.8 }
+/* Separator */
+.separator {
+	height:0;
+	margin:30px 0;
+	border-top:1px solid #ddd
+}
+.column { margin-bottom:15px }
+
+/* #Typography
+================================================== */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 {font-size: 25px; }
+h2 {font-size: 23px; }
+h3 {font-size: 21px; }
+h4 {font-size: 19px; }
+h5 {font-size: 17px; }
+h6 {font-size: 15px; }
+
+small { font-size:12px }
+ol { list-style: decimal }
+ul { list-style: disc }
+li { margin-left: 30px }
+h1, h2, h3, h4, h5, h6,
+p, dl, hr, ol, ul, pre, table, address, fieldset, figure {
+  margin-bottom: 20px;
+}
+em { font-style:italic }
+a { color:#1982d1; text-decoration:none }
+a:hover { text-decoration:underline }
+pre, code {
+	background:#ddd;
+	padding:10px;
+	font-size:12px;
+	overflow:auto;
+	font-family: 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+}
+blockquote {
+	font:1.3em/1.5 'Georgia';
+	font-style:italic;
+	margin-left:40px;
+}
+
+/* Form Element */
+input[type="text"], textarea {
+	padding:5px 2px;
+	border:1px solid #ccc
+}
+textarea {
+	resize:none
+}
+input[type="submit"] {
+	color:#fff;
+	border:1px solid #ccc;
+	padding:5px 10px;
+	cursor:pointer;
+	background:#1982d1;
+}
+
+/* #Flex Slider
+================================================== */
+.flex-container a:active, .flexslider a:active {outline: none;}
+.slides, .flex-control-nav, .flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+.flexslider {width: 100%; margin: 0; padding: 0; position:relative}
+.flexslider .slides > li {display: none; margin-left:0}
+.flexslider .slides img {max-width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* Flex Slider Theme -- Edit style untuk flexslider di bagian ini */
+.flex-container {
+	zoom:1;
+	margin-bottom:60px;
+	position:relative
+}
+.flexslider .slides > li {
+	position:relative
+}
+.flex-control-nav li { 
+	margin:0
+}
+.flex-control-nav a {
+	cursor:pointer
+}
+.flex-caption {
+	width: 96%; 
+	padding: 2%; 
+	position: absolute; 
+	left: 0; 
+	bottom: 0; 
+	background: rgba(0,0,0,.3); 
+	color: #fff;
+	line-height: 18px;
+}
+/* Direction Nav */
+.flex-direction-nav li a {
+	width:52px;
+	padding:5px 10px;
+	margin: -13px 0 0; 
+	display: block;
+	background:#fff;
+	text-align:center;
+	top: 50%;
+	position: absolute;
+	cursor: pointer
+}
+.flex-direction-nav li a.next {right: 20px}
+.flex-direction-nav li a.prev {left: 20px}
+.flex-direction-nav li a.disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+.flex-control-nav {
+	width: 100%; 
+	position: absolute; 
+	bottom: -30px; 
+	text-align: center
+}
+.flex-control-nav li { 
+	margin: 0 0 0 5px; 
+	display: inline-block; 
+	zoom: 1; 
+	*display: inline
+}
+.flex-control-nav li:first-child {margin: 0;}
+.flex-control-nav li a {
+	padding:0 5px;
+	display: block; 
+	cursor: pointer
+}
+.flex-control-nav li .active {
+	color:#fff;
+	background:#1982d1
+}
+
+/* #Menu
+================================================== */
+.menu {
+	margin:0;
+	list-style:none
+}
+.menu li {
+	margin:0;
+	float:left;
+	display:inline
+}
+.menu a {
+	display:block;
+	padding:2px 10px 
+}
+.menu a:hover {
+	text-decoration:none
+}
+
+/**
+* SUB MENU
+* ======== 
+* Gunakan style ini saat membuat submenu, hanya tinggal ubah beberapa
+* property saja. Akan saya beri keterangan bagian mana saja yang dapat di ubah.
+* Untuk dropdown effect, gunakan jquery sooperfish yang telah di sediakan 
+* di direktori includes/js/jquery.sooperfish.js
+*/
+/* Jangan ubah bagian ini, hanya ubah bagian yang saya beri comment */
+ul.sf-menu { margin:0; padding:0 }
+ul.sf-menu { display:block; position:relative }
+ul.sf-menu li {
+	display:block;
+	list-style:none;
+	float:left;
+	position:relative;
+}
+ul.sf-menu li:hover { visibility:inherit; /* fixes IE7 'sticky bug' */ }
+ul.sf-menu a { display:block; position:relative }
+ul.sf-menu ul {
+	position:absolute;
+	left:0;
+	width:150px; 
+	top:auto;
+	left:-999999px;
+}
+ul.sf-menu ul a { zoom:1; /* IE6/7 fix */ }
+ul.sf-menu ul li {
+	float:left;
+	width:150px; /* Ubah line ini untuk mengubah lebar sub-menu */
+}
+ul.sf-menu ul ul { 
+	top:0;
+	margin:0 0 0 150px; /* besar margin left harus sama dengan lebar menu di atas */
+}
+ul.sf-menu li:hover ul,ul.sf-menu li:focus ul,ul.sf-menu li.sf-hover ul { /*first level*/
+	left:auto;
+}
+ul.sf-menu li:hover ul ul,ul.sf-menu li:focus ul ul,ul.sf-menu li.sf-hover ul ul {
+	left:-999999px;
+}
+ul.sf-menu ul li:hover ul,ul.sf-menu ul li:focus ul,ul.sf-menu ul li.sf-hover ul {/*second level*/
+	left:auto;
+}
+ul.sf-menu ul li:hover ul ul,ul.sf-menu ul li:focus ul ul,ul.sf-menu ul li.sf-hover ul ul {
+	left:-999999px;
+}
+ul.sf-menu ul ul li:hover ul,ul.sf-menu ul ul li:focus ul,ul.sf-menu ul ul li.sf-hover ul {/*third level*/
+	left:auto;
+}
+ul.sf-menu ul ul li:hover ul ul,ul.sf-menu ul ul li:focus ul ul,ul.sf-menu ul ul li.sf-hover ul ul {
+	left:-999999px;
+}
+ul.sf-menu ul ul ul li:hover ul,ul.sf-menu ul ul ul li:focus ul,ul.sf-menu ul ul ul li.sf-hover ul {/*fourth level*/
+	left:auto;
+}
+ul.sf-menu ul ul ul li:hover ul ul,ul.sf-menu ul ul ul li:focus ul ul,ul.sf-menu ul ul ul li.sf-hover ul ul {
+	left:-999999px;
+}
+/* Ubah bagian ini untuk styling sub menu */
+.sub-menu {
+	background:#fff;
+	border:1px solid #ddd;
+	border-width:0 1px
+}
+.sub-menu a {
+	padding:5px 10px;
+	border-bottom:1px solid #ddd
+}
+.sub-menu a:hover {
+	color:#fff;
+	background:#1982d1
+}
+/* Arrow indikator sub-menu */
+.sf-arrow {
+	padding-left:5px
+}
+
+
+/* #Comment List & Comment Form
+================================================== */
+.commentlist, .commentlist .children {
+	list-style:none
+}
+.commentlist .children {
+	margin:0 0 0 40px
+}
+.commentlist li {
+	margin-left:0;
+	overflow:hidden
+}
+.comment-entry {
+	margin-bottom:20px;
+	border-bottom:1px solid #ccc
+}
+.comment-author {
+	overflow:hidden;
+	margin-bottom:10px
+}
+.comment-author .avatar {
+	float:left;
+	margin-right:10px
+}
